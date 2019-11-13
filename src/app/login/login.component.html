@@ -1,0 +1,36 @@
+<h5>Login</h5>
+<div class = "row">
+    <form [formGroup] = "form" (ngSubmit) = "onSignIn()">
+        <div class = "row">
+            <div class = "form-group">
+                <input id = "email" type = "email"
+                class = "validate" formControlName = "email"
+                [class.invalid] = "form.controls['email'].touched && !form.controls['email'].valid">
+
+                <label for ="email" data-error = "Invalid email">Email</label>
+
+            </div>
+        </div>
+
+        <div class = "row">
+                <div class = "form-group">
+                    <input id = "password" type = "password"
+                    class = "validate" formControlName = "password"
+                    [class.invalid] = "form.controls['password'].touched && !form.controls['password'].valid">
+    
+                    <label for ="password" data-error = "Invalid password">Password</label>
+    
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class = "form-group">
+                    <button class= "btn btn-primary" type = "submit" >
+                        Entrar
+                    </button>
+                </div>
+
+            </div>
+
+    </form>
+</div>
